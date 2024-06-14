@@ -25,7 +25,7 @@ $(document).ready(function () {
     inputNumero6: false,
     inputNumero7: false,
     inputNumero8: false,
-    inputNumero9: false,
+    inputNumero9: false
   };
 
   const validarCampo = (expresion, input, campo) => {
@@ -76,7 +76,9 @@ $(document).ready(function () {
         break;
     }
 
-    if (campos["inputNumero1"]) {
+    if (campos["inputNumero0"] && campos["inputNumero1"] && campos["inputNumero2"] && campos["inputNumero3"] && campos["inputNumero4"] &&
+      campos["inputNumero5"] && campos["inputNumero6"] && campos["inputNumero7"] && campos["inputNumero8"] && campos["inputNumero9"]
+    ) {
       $(`#botonEnviar`).prop('disabled', false);
     }
 

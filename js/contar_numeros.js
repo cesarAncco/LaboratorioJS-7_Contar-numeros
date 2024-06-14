@@ -1,35 +1,3 @@
-// let numeros = [1,2,3,7,1,-1,-2,0,-9,-10];
-// let numeros = [1,2,3,4,5,6,7,8,9,10];
-
-// let numPositivos = 0;
-// let numNegativos = 0;
-// let ceros = 0;
-
-// numeros.forEach(numero => {
-//   if (numero < 0) numNegativos++;
-//   if (numero == 0) ceros++;
-//   if (0 < numero) numPositivos++;
-// });
-
-// const numNegativos = numeros.filter(numero => numero < 0).length;
-// const ceros = numeros.filter(numero => numero === 0).length;
-// const numPositivos = numeros.filter(numero => numero > 0).length;
-
-// console.log('Positivos: ', numPositivos)
-// console.log('Negativos: ', numNegativos)
-// console.log('Ceros: ', ceros)
-
-// let max = numeros[0];
-// let min = numeros[numeros.length-1];
-
-// numeros.forEach(numero => {
-//   if (max < numero) max = numero;
-//   if (numero < min) min = numero;
-// })
-
-// console.log('Valor maximo: ', max);
-// console.log('Valor minimo: ', min);
-
 $(document).ready(function(){
   $('#formulario').submit(function(e){
     e.preventDefault();
@@ -74,5 +42,7 @@ function conteo_numeros(numNegativos, ceros, numPositivos) {
   newDiv.html(cardContent);
 
   divConteoNumeros.append(newDiv);
+
+  $(`#botonEnviar`).prop('disabled', true);
 
 }
